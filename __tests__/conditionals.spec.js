@@ -4,13 +4,17 @@ describe("Condicionales en JavaScript", () => {
     test("Completa el valor del resultado 'expected' para que pase el test", () => {
         let name = "Lara";
         let result = "Lara tiene un nombre corto";
+        if (name.length >=6) {
+            result = "Lara tiene un nombre largo";
+        } else {
+            result = "Lara tiene un nombre corto"
+        };
 
-        if (name.length >= 6) {
-            result = "Lara tiene un nombre largo"
-        }
+        
 
         // Edita el .toEqual() (los "???") para que pase el test
         expect(result).toEqual(???);
+       
     })
 
 
