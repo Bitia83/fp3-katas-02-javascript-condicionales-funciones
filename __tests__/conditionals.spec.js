@@ -4,16 +4,14 @@ describe("Condicionales en JavaScript", () => {
     test("Completa el valor del resultado 'expected' para que pase el test", () => {
         let name = "Lara";
         let result = "Lara tiene un nombre corto";
-        if (name.length >=6) {
+        if (name.length >= 6) {
             result = "Lara tiene un nombre largo";
-        } else {
-            result = "Lara tiene un nombre corto"
-        };
-
-        
+        } 
+          
+    
 
         // Edita el .toEqual() (los "???") para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Lara tiene un nombre corto");
        
     })
 
@@ -30,7 +28,7 @@ describe("Condicionales en JavaScript", () => {
         }
 
         // Edita el .toEqual() para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Olga es mayor de edad.");
     })
 
 
@@ -47,7 +45,7 @@ describe("Condicionales en JavaScript", () => {
         }
 
         // Edita el .toEqual() para que pase el test
-        expect(result).toEqual(???);
+        expect(result).toEqual("Pizza con pepperoni");
     })
 })
 
@@ -58,7 +56,11 @@ describe("Escribe tus propios tests", () => {
         let greeting;
 
         // Escribe aquí tu condicional contemplando las 2 casuísticas. En este caso, el saludo debe ser "¡Hola!" o bien "Hello!".
-        
+        if (country === "UK") {
+            greeting = "Hello!";
+        } else {
+            greeting = "Hola";
+        }
 
         expect(greeting).toBe("Hello!");
     })
@@ -69,9 +71,19 @@ describe("Escribe tus propios tests", () => {
         let saludo;
         
         // Escribe aquí tu condicional contemplando las 3 casuísticas
+        if (hour <= 12 && hour >= 6) {
+            saludo = "Buenos días";
+        }  else if (hour > 12 && hour <= 20) {
+            saludo = "Buenas tardes";
+        }else if (hour > 20 && hour < 6) {
+            saludo = " Buenas noches";
+        }
     
-
-        expect(saludo).toEqual("Buenas tardes");
+/* primera condicion: si es antes de las 12 y despues de las 6, decimos 'buenos dias'--- saludo = "buenos dias"
+segunda condicion: si es despues de las 12 y antes de las 20, decimo 'buenas tardes'--- saludo = "buenas tardes"
+tercera c ondicion: si es despoues de las 20 y antes de las 6 decimos 'buenas noches' ---- saludo= "buenas noches"
+  */
+       expect(saludo).toEqual("Buenas tardes");
     })
 
 })
